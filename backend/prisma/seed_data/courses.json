@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Spelarutbildningsplan",
+    "description": "Denna spelarutbildningsplan går översiktligt igenom allt det som alla spelare oavsett spelformat bör veta om fotboll.",
+    "learnifierId": "44567"
+  },
+  {
+    "name": "3v3",
+    "description": "3v3 är ett spelformat som passar för nya spelare mellan 6-7 år som ska lära sig grunderna.",
+    "learnifierId": "44431",
+    "format": "3v3"
+  },
+  {
+    "name": "5v5",
+    "description": "5v5 är ett spelformat som passar för spelare mellan 8-9 år.",
+    "learnifierId": "44475",
+    "format": "5v5"
+  },
+  {
+    "name": "7v7",
+    "description": "7v7 är ett spelformat som passar för spelare mellan 10-12 år.",
+    "learnifierId": "46026",
+    "format": "7v7"
+  },
+  {
+    "name": "9v9",
+    "description": "9v9 är ett spelformat som passar för spelare mellan 13-14 år.",
+    "learnifierId": "44476",
+    "format": "9v9"
+  },
+  {
+    "name": "11v11",
+    "description": "11v11 formatet motsvarar fotboll som spelas på professionell nivå och passar från 15 år och uppåt.",
+    "learnifierId": "44477",
+    "format": "11v11"
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "name": "backend-playersacademy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+  "start": "node dist/index.js",
+  "dev": "nodemon src/index.ts",
+  "build": "tsc",
+  "postbuild": "cpx \"src/config/*.json\" dist/config",
+  "lint": "npx eslint \"src/**/*.{ts,tsx}\""
+},
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johansson-andreas/backend-playersacademy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johansson-andreas/backend-playersacademy/issues"
+  },
+  "homepage": "https://github.com/johansson-andreas/backend-playersacademy#readme",
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cookie-session": "^2.0.49",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.15.18",
+    "@types/nodemailer": "^6.4.17",
+    "@types/passport": "^1.0.17",
+    "@types/passport-google-oauth2": "^0.1.10",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "cpx": "^1.5.0",
+    "eslint": "^9.27.0",
+    "nodemon": "^3.1.9",
+    "prisma": "^6.5.0",
+    "ts-node": "^10.9.2",
+    "ts-to-zod": "^3.15.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.32.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "cookie-session": "^2.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.2",
+    "nodemailer": "^7.0.3",
+    "passport": "^0.6.0",
+    "passport-google-oauth2": "^0.2.0",
+    "zod": "^3.24.2",
+    "zod-openapi": "^4.2.4"
+  }
+}

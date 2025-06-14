@@ -1,0 +1,11 @@
+model Team {
+  id             String       @id @default(uuid())
+  year           Int
+  gender         String
+  organizationId String
+  organization   Organization @relation("TeamToOrganization", fields: [organizationId], references: [id], onDelete: Cascade)
+  coaches        User[]       @relation("TeamCoach")
+  gameFormat   GameFormat? @relation(fields: [gameFormatId], references: [id])
+  gameFormatId String?
+  courses       Course[]
+}

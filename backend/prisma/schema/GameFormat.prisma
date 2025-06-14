@@ -1,0 +1,7 @@
+model GameFormat {
+  id     String   @id @default(uuid())
+  name   String
+  ages   Int[]
+  course Course[]
+  team   Team[]
+}

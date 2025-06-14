@@ -1,0 +1,10 @@
+model OrgProfile {
+  id             String       @id @default(uuid())
+  logo           String?
+  colors         String
+  introText      String
+  organizationId String       @unique
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  email          String?
+  phone          Int?
+}

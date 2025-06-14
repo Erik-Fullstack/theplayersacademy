@@ -1,0 +1,70 @@
+
+
+services:
+  api:
+    image: registry.chasacademy.dev/chas-challenge-2025/group-7/backend/express_api:${DOCKER_TAG}
+    restart: unless-stopped
+    networks:
+      - traefik-public
+      - group7-db
+    environment:
+      - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@group7:5432/${POSTGRES_DB}
+      - LEARNIFIER_PUBLIC_KEY=${LEARNIFIER_PUBLIC_KEY}
+      - LEARNIFIER_SECRET_KEY=${LEARNIFIER_SECRET_KEY}
+      - LEARNIFIER=${LEARNIFIER}
+      - ORGANIZATION_ID=${ORGANIZATION_ID}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - SESSION_KEY=${SESSION_KEY}
+      - SECRET_SESSION_KEY=${SECRET_SESSION_KEY}
+      - FRONTEND_URL=${FRONTEND_URL}
+      - BACKEND_URL=${BACKEND_URL}
+
+    depends_on:
+      - group7
+
+    deploy:
+      mode: replicated
+      replicas: 1 
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=traefik-public
+        - traefik.constraint-label=traefik-public
+        - traefik.http.routers.${NORMALIZED_STACK_NAME}-http.rule=Host(`${NORMALIZED_STACK_NAME}.cc25.chasacademy.dev`)
+        - traefik.http.routers.${NORMALIZED_STACK_NAME}-http.entrypoints=http
+        - traefik.http.routers.${NORMALIZED_STACK_NAME}-http.middlewares=https-redirect
+        - traefik.http.routers.${NORMALIZED_STACK_NAME}-https.rule=Host(`${NORMALIZED_STACK_NAME}.cc25.chasacademy.dev`)
+        - traefik.http.routers.${NORMALIZED_STACK_NAME}-https.entrypoints=https
+        - traefik.http.routers.${NORMALIZED_STACK_NAME}-https.tls=true
+        - traefik.http.routers.${NORMALIZED_STACK_NAME}-https.tls.certresolver=le
+        - traefik.http.routers.${NORMALIZED_STACK_NAME}.tls.domains[0].main=cc25.chasacademy.dev
+        - traefik.http.routers.${NORMALIZED_STACK_NAME}.tls.domains[0].sans=*.cc25.chasacademy.dev
+        - traefik.http.services.${NORMALIZED_STACK_NAME}.loadbalancer.server.port=3000
+  group7:
+    image: postgres:16-alpine    
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      
+    volumes:
+      - /srv/docker/volumes/group7:/var/lib/postgresql/data
+    networks:
+      - group7-db
+    
+
+
+networks:
+  traefik-public:
+    external: true
+  group7-db:
+  
+
+
+ 
+
+
+

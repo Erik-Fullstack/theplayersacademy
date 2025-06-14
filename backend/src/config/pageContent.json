@@ -1,0 +1,75 @@
+{
+  "landingpage": {
+    "id": "Landing Page",
+    "url": "/",
+    "isIterable": false,
+    "sections": [
+      {
+        "id": "hero",
+        "title": "The Players Academy",
+        "text": "Strukturerad spelarutveckling för föreningar med ambition"
+      },
+      {
+        "id": "featureCard1",
+        "title": "STRUKTURERADE TRÄNINGSPROGRAM",
+        "text": "Sit veniam culpa officia nulla."
+      },
+      {
+        "id": "featureCard2",
+        "title": "TYDLIGA STEG",
+        "text": "Dolore aute occaecat aliquip aliquip mollit adipisicing sint ullamco dolor Lorem."
+      },
+      {
+        "id": "featureCard3",
+        "title": "INDIVIDUELLA UTVECKLINGSMÅL",
+        "text": "Id sint ut nulla laborum duis Lorem laboris aliquip."
+      },
+      {
+        "id": "featureCard4",
+        "title": "Enkel utvecklingsväg",
+        "text": "En tydlig väg för spelare att utvecklas genom strukturerade träningsprogram och individuella mål."
+      },
+      {
+        "id": "featureCard5",
+        "title": "Inspirerande utmaningar",
+        "text": "Vi erbjuder spelarna utmanande och roliga träningsmoment som främjar kontinuerlig utveckling."
+      },
+      {
+        "id": "featureCard6",
+        "title": "Vetenskaplig grund",
+        "text": "Genom SvFF:s och UEFA:s metoder säkerställer vi långsiktig och rätt utveckling för både spelare och tränare."
+      }
+    ]
+  },
+  "faq": {
+    "id": "FAQ",
+    "isIterable": true,
+    "sections": [
+      {
+        "id": "FAQ1",
+        "title": "Vad är Players Academy?",
+        "text": "Players Academy är ett utbildningskoncept som hjälper fotbollsföreningar att bygga en långsiktig och hållbar spelarutbildning. Med stöd i vetenskaplig forskning och metoder från SvFF och UEFA erbjuder vi strukturerade träningsprogram, individuella utvecklingsmål och en tydlig väg från barnfotboll till seniorspel. Vi stöttar föreningar i att skapa en röd tråd i spelarutvecklingen, med spelaren i centrum."
+      },
+      {
+        "id": "FAQ2",
+        "title": "Hur anpassas utbildningen efter olika åldrar och nivåer?",
+        "text": "Vår spelarutbildning är uppbyggd för att följa spelarnas naturliga utveckling – både tekniskt, fysiskt och mentalt. Träningen anpassas efter varje åldersgrupp och spelform, från 3v3 till 11v11. För varje steg ökar utmaningarna i teknik, spelförståelse och fysik, samtidigt som vi sätter upp individuella mål och följer upp spelarnas framsteg löpande."
+      },
+      {
+        "id": "FAQ3",
+        "title": "Vad krävs av föreningen för att komma igång?",
+        "text": "För att implementera Players Academy krävs ett långsiktigt engagemang från föreningen. Vi hjälper till med allt material och upplägg, men föreningen behöver: Utse en kontaktperson, Säkerställa att tränarna deltar i våra utbildningar och vara redo att följa en tydlig utvecklingsplan. Vi står för struktur, utbildning och uppföljning – föreningen står för viljan att utvecklas."
+      },
+      {
+        "id": "FAQ4",
+        "title": "Hur stöttar ni tränarna i deras roll?",
+        "text": "Vi erbjuder introduktionsutbildning för tränare två gånger per år (vår och höst). Tränarna får: Tillgång till träningsplanering och säsongsmallar, Verktyg för individuell spelarutveckling, En tydlig metodik att följa och löpande uppföljning för att säkerställa kvalitet. På så sätt höjs både tränarnas kompetens och lägstanivån i hela föreningen."
+      },
+      {
+        "id": "faq5",
+        "title": "Vad kostar det, och vad ingår i ert samarbete?",
+        "text": "Kostnaden baseras på föreningens storlek och ambitionsnivå. I vårt grundpaket ingår: Tränarutbildning, Träningsprogram för olika åldrar, Mallar för säsongsplanering och individuella mål och Stödmaterial och uppföljning. Vi erbjuder även tillval som mentorstöd och utökade workshops. Kontakta oss så skräddarsyr vi ett upplägg som passar just er!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+model OrgCourse {
+  id             String        @id @default(uuid())
+  introText      String
+  courseId       String
+  organizationId String?
+  course         Course        @relation(fields: [courseId], references: [id])
+  organization   Organization? @relation(fields: [organizationId], references: [id])
+  allAccess      Boolean       @default(false)
+}

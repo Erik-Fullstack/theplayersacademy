@@ -1,0 +1,19 @@
+model Subscription {
+  id             String       @id @default(uuid())
+  paymentInfo    String
+  seatLimit      Int
+  pricePlan      PlanType     @default(YEARLY)
+  organizationId String       @unique
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  status         SubStatus    @default(INACTIVE)
+}
+
+enum SubStatus {
+  ACTIVE
+  INACTIVE
+}
+
+enum PlanType {
+  MONTHLY
+  YEARLY
+}

@@ -1,0 +1,1 @@
+export const extraCourses = ["c6ba11d8-724d-427f-8e3c-cc947b706440"]

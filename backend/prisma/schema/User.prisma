@@ -1,0 +1,16 @@
+model User {
+  id                String        @id @default(uuid())
+  firstName         String
+  lastName          String
+  learnifierId      String?        @unique
+  email             String        @unique
+  role              Role          @default(USER)
+  organizationId    String?
+  organization      Organization? @relation("Org", fields: [organizationId], references: [id])
+  seat              Seat?
+  assignedCourses   Course[]      @relation("CourseToUser")
+  teams             Team[]        @relation("TeamCoach")
+  ownedOrganization Organization? @relation("Owner")
+  feedback Feedback[] @relation("UserFeedback")
+  profileImage      String?
+}

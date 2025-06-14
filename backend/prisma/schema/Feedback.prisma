@@ -1,0 +1,17 @@
+model Feedback {
+  id         String  @id @default(uuid())
+  userId     String?
+  user       User?   @relation("UserFeedback",fields: [userId], references: [id])
+  email      String?
+  category   FeedbackCategory
+  message    String
+  rating     Int
+  createdAt  DateTime @default(now())
+  isResolved Boolean @default(false)
+}
+
+enum FeedbackCategory {
+  BUG
+  SUGGESTION
+  OTHER
+}

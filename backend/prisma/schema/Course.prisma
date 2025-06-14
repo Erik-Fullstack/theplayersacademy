@@ -1,0 +1,11 @@
+model Course {
+  id            String      @id @default(uuid())
+  name          String
+  learnifierId   String
+  gameFormatId  String?
+  description   String
+  format        GameFormat? @relation(fields: [gameFormatId], references: [id])
+  orgCourse     OrgCourse[]
+  teams         Team[]
+  assignedUsers User[]      @relation("CourseToUser")
+}

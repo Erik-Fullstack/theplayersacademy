@@ -1,0 +1,13 @@
+model Organization {
+  id             String           @id @default(uuid())
+  name           String           @unique
+  ownerId        String?           @unique
+  owner          User?             @relation("Owner", fields: [ownerId], references: [id])
+  invitationCode InvitationCode[]
+  courses        OrgCourse[]
+  profile        OrgProfile?
+  seats          Seat[]
+  subscription   Subscription?
+  users          User[]           @relation("Org")
+  teams          Team[]           @relation("TeamToOrganization")
+}

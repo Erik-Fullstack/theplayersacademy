@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font-family: 'Barlow', sans-serif; */
+/* font-family: 'Barlow Semi Condensed', sans-serif; */
+
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+}
+
+.font-body {
+  font-family: 'Barlow', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 600;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+/* Responsive heading sizes for better mobile experience */
+h1 {
+  @apply text-branding1;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
+}
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.9rem; }
+h4 { font-size: 1.6rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; font-style: italic; }
+
+/* Restore larger sizes on desktop */
+@media (min-width: 768px) {
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 2.9rem; }
+  h3 { font-size: 2.4rem; }
+  h4 { font-size: 1.9rem; }
+  h5 { font-size: 1.3rem; }
+  h6 { font-size: 1.1rem; }
+}
+
+/* SITE LAYOUT --------------------------------------- */
+
+.site-footer {
+  color: white;
+}
+
+.site-header {
+  @apply text-branding1 border-b-[1rem] border-branding1;
+}
+
+/* LAYOUT COMPONENTS --------------------------------- */
+
+.section {
+
+  .inner-container {
+
+  }
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+
+  }
+
+  &.top {
+    margin-top: -4rem;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* COMMON COMPONENTS --------------------------------- */
+
+.feature-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .3rem;
+  border-radius: 8px;
+  text-align: center;
+
+  .title {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+  .subtitle {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  .text-content {
+    font-size: .9rem;
+  }
+
+  .iconify {
+    font-size: 3.5rem;
+  }
+}
+
+.welcome-message {
+  a {
+    @apply text-red-800 underline decoration-red-200 underline-offset-2 hover:text-red-950;
+  }
+}
+
+@layer base {
+  .site-header {
+
+  }
+  .site-footer {
+    a {
+      @apply text-white;
+    }
+    .nav-item {
+      @apply text-black;
+    }
+
+  }
+}
+
+/* STYLING --------------------------------- */
+
+.link {
+  @apply text-branding3 font-semibold;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+
+  &:hover {
+    @apply text-opacity-70;
+    text-decoration: none;
+  }
+
+  &.dark {
+    color: white;
+    text-decoration-color: white;
+  }
+}
+
+.circle-img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.list-card {
+  @apply border-1 border-gray-300 p-2 rounded-md;
+}
+
+.dark-label [data-slot="label"] {
+  color: white !important;
+}
