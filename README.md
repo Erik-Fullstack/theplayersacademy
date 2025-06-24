@@ -167,6 +167,3 @@ Dessa delar finns med i vår roadmap för framtida vidareutveckling och skulle t
    ```
 
 **Note:** Learnifier integration is optional - the app will run without those credentials.
-
-
-## Deploy: https://chas-challenge-2025group-7frontend-vite-main.cc25.chasacademy.dev/
