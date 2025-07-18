@@ -9,7 +9,7 @@ Därför har vi tagit fram en modern webbapplikation för att effektivisera och 
 **Fullstackutvecklare**
 - Andréa Stålstierna ([LinkedIn](https://www.linkedin.com/in/andr%C3%A9a-st%C3%A5lstierna-489867121/))
 - Andreas Johansson ([GitHub](https://github.com/johansson-andreas) | [LinkedIn](https://www.linkedin.com/in/andreas-johansson92/))
-- Erik Andersson ([GitHub]https://github.com/Erik-Fullstack) | ([LinkedIn](https://www.linkedin.com/in/erik-andersson-a29022327/))
+- Erik Andersson ([GitHub](https://github.com/Erik-Fullstack) | ([LinkedIn](https://www.linkedin.com/in/erik-andersson-a29022327/))
 - Filip Hansén ([LinkedIn](https://www.linkedin.com/in/filip-hansen-650115170/))
 - Ida Öhlén ([GitHub](https://github.com/idaohlen/) | [LinkedIn](https://www.linkedin.com/in/idaohlen/))
 - Hanna Österberg ([LinkedIn](https://www.linkedin.com/in/hanna-%C3%B6sterberg-4b963b203/))
